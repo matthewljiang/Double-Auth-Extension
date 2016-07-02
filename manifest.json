@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Double Auth",
+  "description": "Create, view, and respond to pitches from the Washington Post homepage and individual article pages.",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["jquery-1.12.4.min.js","content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ]
+}
